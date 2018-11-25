@@ -1,0 +1,57 @@
+{
+  "name": "memoize-one-with-dispose",
+  "version": "0.0.0-0",
+  "description": "A memoization function with cache equals to one and a disposing function",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "babel --out-dir lib --ignore __tests__/**/*,**/*.spec.js,**/*.test.js --source-maps true src/",
+    "clean": "npx rimraf lib",
+    "coveralls": "cat ./coverage/lcov.info | coveralls",
+    "test": "jest",
+    "watch": "npm run build -- --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/compulim/memoize-one-with-dispose.git"
+  },
+  "keywords": [
+    "dispose",
+    "memoize",
+    "memoize-one"
+  ],
+  "author": "William Wong <compulim@hotmail.com> (http://compulim.info/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/compulim/memoize-one-with-dispose/issues"
+  },
+  "homepage": "https://github.com/compulim/memoize-one-with-dispose#readme",
+  "jest": {
+    "collectCoverage": true,
+    "coverageReporters": [
+      "lcov",
+      "text-summary"
+    ],
+    "testEnvironment": "node"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.1.5",
+    "@babel/core": "^7.1.6",
+    "@babel/plugin-proposal-object-rest-spread": "^7.0.0",
+    "@babel/plugin-transform-runtime": "^7.1.0",
+    "@babel/preset-env": "^7.1.6",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-jest": "^23.6.0",
+    "coveralls": "^3.0.2",
+    "jest": "^23.6.0",
+    "memoize-one": "^4.0.3"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.1.5"
+  },
+  "peerDependencies": {
+    "memoize-one": "^4.0.3"
+  }
+}
