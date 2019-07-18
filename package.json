@@ -37,21 +37,21 @@
     "access": "public"
   },
   "devDependencies": {
-    "@babel/cli": "^7.1.5",
-    "@babel/core": "^7.1.6",
-    "@babel/plugin-proposal-object-rest-spread": "^7.0.0",
-    "@babel/plugin-transform-runtime": "^7.1.0",
-    "@babel/preset-env": "^7.1.6",
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
+    "@babel/plugin-proposal-object-rest-spread": "^7.5.5",
+    "@babel/plugin-transform-runtime": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
     "babel-core": "^7.0.0-bridge.0",
-    "babel-jest": "^23.6.0",
-    "coveralls": "^3.0.2",
-    "jest": "^23.6.0",
-    "memoize-one": "^4.0.3"
+    "babel-jest": "^24.8.0",
+    "coveralls": "^3.0.5",
+    "jest": "^24.8.0",
+    "memoize-one": "^5.0.5"
   },
   "dependencies": {
-    "@babel/runtime": "^7.1.5"
+    "@babel/runtime": "^7.5.5"
   },
   "peerDependencies": {
-    "memoize-one": "^4.0.3"
+    "memoize-one": "^5.0.5"
   }
 }
