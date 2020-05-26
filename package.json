@@ -3,12 +3,14 @@
   "version": "1.0.1-0",
   "description": "A memoization function with cache equals to one and a disposing function",
   "main": "lib/index.js",
+  "files": [
+    "lib/**/*"
+  ],
   "scripts": {
-    "build": "babel --out-dir lib --ignore __tests__/**/*,**/*.spec.js,**/*.test.js --source-maps true src/",
-    "clean": "npx rimraf lib",
-    "coveralls": "cat ./coverage/lcov.info | coveralls",
-    "test": "jest",
-    "watch": "npm run build -- --watch"
+    "build": "babel --out-dir lib src --ignore **/*.spec.js,**/*.test.js",
+    "prestart": "npm run build:babel",
+    "start": "npm run build:babel -- --skip-initial-build --watch",
+    "test": "jest --collectCoverage true"
   },
   "repository": {
     "type": "git",
@@ -25,31 +27,23 @@
     "url": "https://github.com/compulim/memoize-one-with-dispose/issues"
   },
   "homepage": "https://github.com/compulim/memoize-one-with-dispose#readme",
-  "jest": {
-    "collectCoverage": true,
-    "coverageReporters": [
-      "lcov",
-      "text-summary"
-    ],
-    "testEnvironment": "node"
-  },
   "publishConfig": {
     "access": "public"
   },
   "devDependencies": {
-    "@babel/cli": "^7.5.5",
-    "@babel/core": "^7.5.5",
-    "@babel/plugin-proposal-object-rest-spread": "^7.5.5",
-    "@babel/plugin-transform-runtime": "^7.5.5",
-    "@babel/preset-env": "^7.5.5",
-    "babel-core": "^7.0.0-bridge.0",
-    "babel-jest": "^24.8.0",
-    "coveralls": "^3.0.5",
-    "jest": "^24.8.0",
-    "memoize-one": "^5.0.5"
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.6",
+    "@babel/plugin-proposal-object-rest-spread": "^7.9.6",
+    "@babel/plugin-transform-runtime": "^7.9.6",
+    "@babel/preset-env": "^7.9.6",
+    "babel-core": "^6.26.3",
+    "babel-jest": "^26.0.1",
+    "coveralls": "^3.1.0",
+    "jest": "^26.0.1",
+    "memoize-one": "^5.1.1"
   },
   "dependencies": {
-    "@babel/runtime": "^7.5.5"
+    "@babel/runtime": "7.9.6"
   },
   "peerDependencies": {
     "memoize-one": "^5.0.5"

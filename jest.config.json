@@ -1,0 +1,7 @@
+{
+  "coverageReporters": [
+    "lcov",
+    "text-summary"
+  ],
+  "testEnvironment": "node"
+}
